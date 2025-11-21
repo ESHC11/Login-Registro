@@ -1,0 +1,37 @@
+body {
+    background-color: #577099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 850px;
+    width: 90%;
+}
+
+.box-left, .box-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-left h2, .box-right h2{
+    margin-bottom: 20px;
+}   
+
+.box-left {
+    background: #fff;
+}
