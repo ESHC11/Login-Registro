@@ -1,37 +1,187 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Estilos del cuerpo (Basado en tu captura) */
 body {
     background-color: #577099;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
     height: 100vh;
-    margin: 0;
 }
-
+/* Contenedor principal (La tarjeta blanca y azul) */
 .container {
-    background: white;
-    display: flex;
-    border-radius: 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 850px;
-    width: 90%;
+    width: 900px;
+    max-width: 100%;
+    min-height: 550px;
+    display: flex;
 }
-
-.box-left, .box-right {
-    flex: 1;
+/* --- SECCIÓN IZQUIERDA (Login) --- */
+.login-section {
+    width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.box-left h2, .box-right h2{
+.login-section h2 {
+    font-size: 30px;
     margin-bottom: 20px;
-}   
+    font-weight: 700;
+}
 
-.box-left {
-    background: #fff;
+.input-field {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 12px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin: 15px 0;
+    color: #666;
+}
+
+.options a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-login {
+    background-color: #515f6d; 
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.social-text {
+    margin: 20px 0 10px;
+    font-size: 12px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #577099;
+    color: white;
+    border-color: #577099;
+}
+/* --- SECCIÓN DERECHA (Información/Imagen) --- */
+.info-section {
+    width: 50%;
+    background: linear-gradient(to right, #4a5f85, #2c3e50); 
+    color: #fff;
+    border-top-left-radius: 100px; 
+    border-bottom-left-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.content-right {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-right h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.content-right p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.image-placeholder {
+    margin: 20px 0;
+    color: rgba(255,255,255,0.5);
+}
+
+.btn-register {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border-radius: 20px; 
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #fff;
+    color: #577099;
+}
+/* Responsividad básica para móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 90vw;
+    }
+    .login-section, .info-section {
+        width: 100%;
+        border-radius: 0;
+    }
+    .info-section {
+        border-radius: 0 0 30px 30px;
+        order: 1; /* Cambia a 1 si quieres la imagen abajo */
+    }
 }
