@@ -12,20 +12,22 @@
 
     <div class="container">
         <div class="login-section">
-            <h2>Inicia sesión aquí</h2>
+            <h2 id="formTitle">Inicia sesión aquí</h2>
             
-            <form>
-                <input type="email" placeholder="Correo electrónico" class="input-field">
-                <input type="password" placeholder="Contraseña" class="input-field">
-                
-                <div class="options">
-                    <label>
-                        <input type="checkbox"> Recuérdame
-                    </label>
-                    <a href="#">¿Olvidaste la contraseña?</a>
-                </div>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Correo electrónico" class="input-field" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" class="input-field" required>
+                <button type="submit" class="btn-login">Iniciar Sesión</button>
+            </form>
 
-                <button type="button" class="btn-login">Iniciar Sesión</button>
+            <form id="registerForm" style="display: none;">
+                <input type="text" id="regNombre" placeholder="Tu Nombre Completo" class="input-field" required>
+                <input type="email" id="regEmail" placeholder="Correo para registrar" class="input-field" required>
+                <input type="password" id="regPassword" placeholder="Crea una contraseña" class="input-field" required>
+                <button type="submit" class="btn-login" style="background-color: #2c3e50;">Registrarse</button>
+                <p style="font-size: 12px; margin-top: 10px; cursor: pointer;" id="btnVolver">
+                &larr; Volver al inicio de sesión
+                </p>
             </form>
 
             <p class="social-text">O usa tu cuenta</p>
@@ -47,6 +49,8 @@
             </div>
         </div>
     </div>
+    
 
 </body>
+<script src="./js/login.js"></script>
 </html>
